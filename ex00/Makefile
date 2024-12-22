@@ -1,0 +1,45 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/12/22 13:13:09 by cauvray           #+#    #+#              #
+#    Updated: 2024/12/22 13:29:33 by cauvray          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME	= megaphone
+CC		= c++
+CFLAGS	= -std=c++98
+
+FILES	= megaphone.cpp
+
+OBJS_DIR	= objs
+OBJS_FILES	= $(FILES:.cpp=.o)
+OBJS		= $(addprefix $(OBJS_DIR)/, $(OBJS_FILES))
+
+GREEN	= \033[0;32m
+CYAN	= \033[0;36m
+RESET	= \033[0m
+GRAY	= \033[90m
+
+SUCCESS	= $(GREEN)[SUCCESS]$(RESET)
+INFO	= $(CYAN)[INFO]$(RESET)
+
+all: $(NAME)
+
+$(OBJS_DIR):
+	@if [ ! -d ./$(OBJS_DIR) ]; then \
+		echo "$(INFO) Creating $(OBJS_DIR) directory..."; \
+		echo "$(GRAY)mkdir -p $(OBJS_DIR)"; \
+		mkdir -p $(OBJS_DIR); \
+	fi
+
+$(NAME):
+	$(CC) $(CFLAGS) $(FILES) -o $(NAME)
+
+$(OBJS_DIR)/%.o: $(SRCS_DIR)/*/%.c | $(OBJS_DIR)
+	@echo "$(INFO) Compiling $<...$(GRAY)"
+	$(CC) $(CFLAGS) $(INC_FLAGS) -c $< -o $@

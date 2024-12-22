@@ -6,14 +6,20 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 13:19:46 by cauvray           #+#    #+#             */
-/*   Updated: 2024/12/22 13:25:35 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/12/22 16:41:56 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-int main(void)
+int main(int argc, char *argv[])
 {
-	std::cout << "Hello World!" << std::endl;
-	return (0);
+	std::cout << "Args"
+
+	(void) argc;
+	(void) argv;
+
+	for (int i = 0; i < 5; i++)
+	{
+		std::cout
 }

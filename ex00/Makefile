@@ -6,13 +6,13 @@
 #    By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/22 13:13:09 by cauvray           #+#    #+#              #
-#    Updated: 2024/12/22 13:29:33 by cauvray          ###   ########.fr        #
+#    Updated: 2024/12/22 16:18:59 by cauvray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= megaphone
 CC		= c++
-CFLAGS	= -std=c++98
+CFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 FILES	= megaphone.cpp
 
@@ -37,9 +37,25 @@ $(OBJS_DIR):
 		mkdir -p $(OBJS_DIR); \
 	fi
 
-$(NAME):
-	$(CC) $(CFLAGS) $(FILES) -o $(NAME)
-
-$(OBJS_DIR)/%.o: $(SRCS_DIR)/*/%.c | $(OBJS_DIR)
+$(OBJS_DIR)/%.o: %.cpp | $(OBJS_DIR)
 	@echo "$(INFO) Compiling $<...$(GRAY)"
-	$(CC) $(CFLAGS) $(INC_FLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): $(OBJS)
+	@echo "$(INFO) Compiling $(NAME)... $(GRAY)"
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	@echo "$(SUCCESS) $(NAME) compiled."
+
+clean:
+	@echo "$(INFO) Removing $(OBJS_DIR)...$(GRAY)";
+	rm -rf $(OBJS_DIR)
+	@echo "$(SUCCESS) Objects and libs removed."
+
+fclean: clean
+	@echo "$(INFO) Removing $(NAME)...$(GRAY)"
+	rm -f $(NAME)
+	@echo "$(SUCCESS) $(NAME) removed."
+
+re: fclean all
+
+.PHONY: all lib clean fclean re

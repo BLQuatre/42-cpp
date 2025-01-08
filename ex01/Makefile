@@ -6,7 +6,7 @@
 #    By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/22 13:13:09 by cauvray           #+#    #+#              #
-#    Updated: 2024/12/22 17:48:25 by cauvray          ###   ########.fr        #
+#    Updated: 2025/01/08 15:43:24 by cauvray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,14 @@ NAME	= phonebook
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-FILES	= main.cpp
+FILES	= Contact.cpp PhoneBook.cpp main.cpp
 
 OBJS_DIR	= objs
 OBJS_FILES	= $(FILES:.cpp=.o)
 OBJS		= $(addprefix $(OBJS_DIR)/, $(OBJS_FILES))
+
+INC_DIR		= .
+INC_FLAGS	= -I $(INC_DIR)
 
 GREEN	= \033[0;32m
 CYAN	= \033[0;36m
@@ -39,11 +42,11 @@ $(OBJS_DIR):
 
 $(OBJS_DIR)/%.o: %.cpp | $(OBJS_DIR)
 	@echo "$(INFO) Compiling $<...$(GRAY)"
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(INC_FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	@echo "$(INFO) Compiling $(NAME)... $(GRAY)"
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(INC_FLAGS) $(OBJS) -o $(NAME)
 	@echo "$(SUCCESS) $(NAME) compiled."
 
 clean:

@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 18:44:25 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/08 15:47:58 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/09 22:06:24 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class PhoneBook
 {
 	private:
 		Contact	contacts[CONTACT_NUMBER];
+		int		contactsNumber;
 		int		lastAddedIndex;
 
 	public:
@@ -28,6 +29,8 @@ class PhoneBook
 
 		void	addContact();
 		void	searchContact();
+
+		void	showShortString(std::string str);
 };
 
 #endif

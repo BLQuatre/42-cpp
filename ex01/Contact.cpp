@@ -6,47 +6,48 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 18:52:41 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/08 15:23:55 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/10 23:23:45 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+#include "iostream"
 
-Contact::Contact() : firstname(""), lastname(""),
-					nickname(""), phone_number(""),
-					darkest_secret("") {}
+Contact::Contact() :	firstName(""), lastName(""),
+						nickname(""), phoneNumber(""),
+						darkestSecret("") {}
 
-Contact::Contact(std::string firstname, std::string lastname,
-				std::string nickname, std::string phone_number,
-				std::string darkest_secret)
+Contact::Contact(std::string firstName, std::string lastName,
+				std::string nickname, std::string phoneNumber,
+				std::string darkestSecret)
 {
-	this->firstname = firstname;
-	this->lastname = lastname;
+	this->firstName = firstName;
+	this->lastName = lastName;
 	this->nickname = nickname;
-	this->phone_number = phone_number;
-	this->darkest_secret = darkest_secret;
+	this->phoneNumber = phoneNumber;
+	this->darkestSecret = darkestSecret;
 }
 
 Contact::~Contact() {}
 
 std::string	Contact::getFirstName(void)
 {
-	return (this->firstname);
+	return (this->firstName);
 }
 
-void	Contact::setFirstName(std::string firstname)
+void	Contact::setFirstName(std::string firstName)
 {
-	this->firstname = firstname;
+	this->firstName = firstName;
 }
 
 std::string	Contact::getLastName(void)
 {
-	return (this->lastname);
+	return (this->lastName);
 }
 
-void	Contact::setLastName(std::string lastname)
+void	Contact::setLastName(std::string lastName)
 {
-	this->lastname = lastname;
+	this->lastName = lastName;
 }
 
 std::string	Contact::getNickname(void)
@@ -61,20 +62,30 @@ void	Contact::setNickname(std::string nickname)
 
 std::string	Contact::getPhoneNumber(void)
 {
-	return (this->phone_number);
+	return (this->phoneNumber);
 }
 
-void	Contact::setPhoneNumber(std::string phone_number)
+void	Contact::setPhoneNumber(std::string phoneNumber)
 {
-	this->phone_number = phone_number;
+	this->phoneNumber = phoneNumber;
 }
 
 std::string	Contact::getDarkestSecret(void)
 {
-	return (this->darkest_secret);
+	return (this->darkestSecret);
 }
 
-void	Contact::setDarkestSecret(std::string darkest_secret)
+void	Contact::setDarkestSecret(std::string darkestSecret)
 {
-	this->darkest_secret = darkest_secret;
+	this->darkestSecret = darkestSecret;
+}
+
+void	Contact::showInformations(void)
+{
+	std::cout << "Contact informations" << std::endl;
+	std::cout << "First Name: " << this->getFirstName() << std::endl;
+	std::cout << "Last Name: " << this->getLastName() << std::endl;
+	std::cout << "Nickname: " << this->getNickname() << std::endl;
+	std::cout << "Phone Number: " << this->getPhoneNumber() << std::endl;
+	std::cout << "Darkest Secret: " << this->getDarkestSecret() << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 18:38:57 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/10 22:44:52 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/10 23:28:46 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #include <stdlib.h>
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook() : contactsNumber(0), lastAddedIndex(-1) {};
+PhoneBook::PhoneBook(void) : contactsNumber(0), lastAddedIndex(-1) {};
 
-PhoneBook::~PhoneBook() {}
+PhoneBook::~PhoneBook(void) {}
 
-void	PhoneBook::addContact()
+void	PhoneBook::addContact(void)
 {
 	Contact		contact;
 	std::string	msg;
@@ -64,14 +64,39 @@ void	PhoneBook::addContact()
 	this->contacts[this->lastAddedIndex] = contact;
 }
 
-void	PhoneBook::searchContact()
+void	PhoneBook::searchContact(void)
 {
-	int			i;
 	int			indexToGet;
 	std::string	indexStr;
 
-	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
-	std::cout << "|----------|----------|----------|----------|" << std::endl;
+	if (this->contactsNumber == 0)
+	{
+		std::cout << "Add contacts if you want to get more infos" << std::endl;
+		return;
+	}
+
+	this->showContacts();
+
+	indexToGet = -1;
+	while (indexToGet < 0 || indexToGet >= CONTACT_NUMBER)
+	{
+		std::cout << "Index > ";
+		std::getline(std::cin, indexStr);
+		indexToGet = atoi(indexStr.c_str());
+		if ((indexStr != "0" && indexToGet == 0) || indexToGet >= this->contactsNumber)
+			indexToGet = -1;
+	}
+
+	this->contacts[indexToGet].showInformations();
+}
+
+void	PhoneBook::showContacts(void)
+{
+	int	i;
+
+	std::cout	<< "+----------+----------+----------+----------+" << std::endl
+				<< "|     Index|First Name| Last Name|  Nickname|" << std::endl
+				<< "+----------+----------+----------+----------+" << std::endl;
 
 	i = 0;
 	while (i < CONTACT_NUMBER)
@@ -91,33 +116,10 @@ void	PhoneBook::searchContact()
 		i++;
 	}
 
-	std::cout << "|----------|----------|----------|----------|" << std::endl;
-
-	if (this->contactsNumber == 0)
-	{
-		std::cout << "Add contacts if you want to get more infos" << std::endl;
-		return;
-	}
-
-	indexToGet = -1;
-	while (indexToGet < 0 || indexToGet >= CONTACT_NUMBER)
-	{
-		std::cout << "Index > ";
-		std::getline(std::cin, indexStr);
-		indexToGet = atoi(indexStr.c_str());
-		if ((indexStr != "0" && indexToGet == 0) || indexToGet >= this->contactsNumber)
-			indexToGet = -1;
-	}
-
-	std::cout << "Contact #" << indexToGet << " informations" << std::endl;
-	std::cout << "First Name: " << this->contacts[indexToGet].getFirstName() << std::endl;
-	std::cout << "Last Name: " << this->contacts[indexToGet].getLastName() << std::endl;
-	std::cout << "Nickname: " << this->contacts[indexToGet].getNickname() << std::endl;
-	std::cout << "Phone Number: " << this->contacts[indexToGet].getPhoneNumber() << std::endl;
-	std::cout << "Darkest Secret: " << this->contacts[indexToGet].getDarkestSecret() << std::endl;
+	std::cout << "+----------+----------+----------+----------+" << std::endl;
 }
 
-void PhoneBook::showShortString(std::string str)
+void	PhoneBook::showShortString(std::string str)
 {
 	int spaces = 10 - str.length();
 	if (spaces > 0)

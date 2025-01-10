@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 00:25:25 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/10 22:47:05 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/10 23:26:21 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,30 +18,32 @@
 class Contact
 {
 	private:
-		std::string	firstname;
-		std::string	lastname;
+		std::string	firstName;
+		std::string	lastName;
 		std::string	nickname;
-		std::string	phone_number;
-		std::string	darkest_secret;
+		std::string	phoneNumber;
+		std::string	darkestSecret;
 
 	public:
 
 		Contact();
-		Contact(std::string firstname, std::string lastname,
-				std::string nickname, std::string phone_number,
-				std::string darkest_secret);
+		Contact(std::string firstName, std::string lastName,
+				std::string nickname, std::string phoneNumber,
+				std::string darkestSecret);
 		~Contact();
 
 		std::string	getFirstName();
-		void		setFirstName(std::string firstname);
+		void		setFirstName(std::string firstName);
 		std::string	getLastName();
-		void		setLastName(std::string lastname);
+		void		setLastName(std::string lastName);
 		std::string	getNickname();
 		void		setNickname(std::string nickname);
 		std::string	getPhoneNumber();
-		void		setPhoneNumber(std::string phone_number);
+		void		setPhoneNumber(std::string phoneNumber);
 		std::string	getDarkestSecret();
-		void		setDarkestSecret(std::string darkest_secret);
+		void		setDarkestSecret(std::string darkestSecret);
+
+		void		showInformations(void);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 18:38:57 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/13 14:16:07 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/13 14:47:01 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #include <stdlib.h>
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(void) : _contactsNumber(0), _lastAddedIndex(-1) {};
+PhoneBook::PhoneBook() : _contactsNumber(0), _lastAddedIndex(-1) {};
 
-PhoneBook::~PhoneBook(void) {}
+PhoneBook::~PhoneBook() {}
 
-void	PhoneBook::addContact(void) {
+void	PhoneBook::addContact() {
 	this->_lastAddedIndex = (this->_lastAddedIndex + 1) % MAX_CONTACTS_NUMBER;
 	if (this->_contactsNumber < MAX_CONTACTS_NUMBER)
 		(this->_contactsNumber)++;
@@ -74,7 +74,7 @@ void	PhoneBook::addContact(void) {
 	this->_contacts[this->_lastAddedIndex].setDarkestSecret(darkestSecret);
 }
 
-void	PhoneBook::searchContact(void) {
+void	PhoneBook::searchContact() {
 	if (this->_contactsNumber == 0) {
 		std::cout << "Add contacts if you want to get more infos" << std::endl;
 		return;
@@ -98,7 +98,7 @@ void	PhoneBook::searchContact(void) {
 	this->_contacts[indexToGet].showInformations();
 }
 
-void	PhoneBook::showContacts(void) {
+void	PhoneBook::showContacts() {
 	std::cout	<< "+----------+----------+----------+----------+" << std::endl
 				<< "|     Index|First Name| Last Name|  Nickname|" << std::endl
 				<< "+----------+----------+----------+----------+" << std::endl;

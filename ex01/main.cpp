@@ -6,14 +6,14 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 17:48:06 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/13 14:23:19 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/13 14:28:04 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <PhoneBook.hpp>
 
-int	main(void)
+int	main()
 {
 	std::string msg;
 	PhoneBook phonebook;

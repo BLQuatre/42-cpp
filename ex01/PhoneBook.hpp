@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 18:44:25 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/13 14:24:46 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/13 14:28:19 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ class PhoneBook {
 		int		_lastAddedIndex;
 
 	public:
-		PhoneBook(void);
-		~PhoneBook(void);
+		PhoneBook();
+		~PhoneBook();
 
-		void	addContact(void);
-		void	searchContact(void);
-		void	showContacts(void);
+		void	addContact();
+		void	searchContact();
+		void	showContacts();
 		void	showShortString(std::string str);
 };
 

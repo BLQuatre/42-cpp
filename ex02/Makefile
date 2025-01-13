@@ -6,7 +6,7 @@
 #    By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/22 13:13:09 by cauvray           #+#    #+#              #
-#    Updated: 2024/12/22 17:49:20 by cauvray          ###   ########.fr        #
+#    Updated: 2025/01/13 14:57:23 by cauvray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	= log
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-FILES	= main.cpp
+FILES	= tests.cpp Account.cpp
 
 OBJS_DIR	= objs
 OBJS_FILES	= $(FILES:.cpp=.o)

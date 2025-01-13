@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 18:52:41 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/13 12:18:04 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/13 14:27:54 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Contact::Contact(std::string firstName, std::string lastName,
 
 Contact::~Contact() {}
 
-std::string	Contact::getFirstName(void) {
+std::string	Contact::getFirstName() {
 	return this->_firstName;
 }
 
@@ -37,7 +37,7 @@ void	Contact::setFirstName(std::string firstName) {
 	this->_firstName = firstName;
 }
 
-std::string	Contact::getLastName(void) {
+std::string	Contact::getLastName() {
 	return this->_lastName;
 }
 
@@ -45,7 +45,7 @@ void	Contact::setLastName(std::string lastName) {
 	this->_lastName = lastName;
 }
 
-std::string	Contact::getNickname(void) {
+std::string	Contact::getNickname() {
 	return this->_nickname;
 }
 
@@ -53,7 +53,7 @@ void	Contact::setNickname(std::string nickname){
 	this->_nickname = nickname;
 }
 
-std::string	Contact::getPhoneNumber(void) {
+std::string	Contact::getPhoneNumber() {
 	return this->_phoneNumber;
 }
 
@@ -61,7 +61,7 @@ void	Contact::setPhoneNumber(std::string phoneNumber) {
 	this->_phoneNumber = phoneNumber;
 }
 
-std::string	Contact::getDarkestSecret(void) {
+std::string	Contact::getDarkestSecret() {
 	return this->_darkestSecret;
 }
 
@@ -69,7 +69,7 @@ void	Contact::setDarkestSecret(std::string darkestSecret) {
 	this->_darkestSecret = darkestSecret;
 }
 
-void	Contact::showInformations(void) {
+void	Contact::showInformations() {
 	std::cout	<< "Contact informations" << std::endl
 				<< "First Name: " << this->getFirstName() << std::endl
 				<< "Last Name: " << this->getLastName() << std::endl

@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 00:25:25 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/13 14:24:27 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/13 14:27:58 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ class Contact {
 		std::string	getDarkestSecret();
 		void		setDarkestSecret(std::string darkestSecret);
 
-		void		showInformations(void);
+		void		showInformations();
 };
 
 #endif

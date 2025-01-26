@@ -6,28 +6,37 @@
 #    By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/22 13:13:09 by cauvray           #+#    #+#              #
-#    Updated: 2025/01/13 14:57:23 by cauvray          ###   ########.fr        #
+#    Updated: 2025/01/26 17:00:37 by cauvray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= log
-CC		= c++
-CFLAGS	= -Wall -Wextra -Werror -std=c++98
+# *** Compilation
+NAME		=	log
+CC			=	c++
+CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 
-FILES	= tests.cpp Account.cpp
+# *** Files
+_FILES		=	Account tests
+FILES		=	$(addsuffix .cpp, $(_FILES))
 
-OBJS_DIR	= objs
-OBJS_FILES	= $(FILES:.cpp=.o)
-OBJS		= $(addprefix $(OBJS_DIR)/, $(OBJS_FILES))
+OBJS_DIR	=	objs
+OBJS_FILES	=	$(FILES:.cpp=.o)
+OBJS		=	$(addprefix $(OBJS_DIR)/, $(OBJS_FILES))
 
-GREEN	= \033[0;32m
-CYAN	= \033[0;36m
-RESET	= \033[0m
-GRAY	= \033[90m
+# *** Includes
+INC_DIRS	=	.
+INC_FLAGS	=	$(addprefix -I, $(INC_DIRS))
 
-SUCCESS	= $(GREEN)[SUCCESS]$(RESET)
-INFO	= $(CYAN)[INFO]$(RESET)
+# *** Colors & Messages
+GREEN		=	\033[0;32m
+CYAN		=	\033[0;36m
+RESET		=	\033[0m
+GRAY		=	\033[90m
 
+SUCCESS		=	$(GREEN)[SUCCESS]$(RESET)
+INFO		=	$(CYAN)[INFO]$(RESET)
+
+# *** Rules
 all: $(NAME)
 
 $(OBJS_DIR):
@@ -39,11 +48,11 @@ $(OBJS_DIR):
 
 $(OBJS_DIR)/%.o: %.cpp | $(OBJS_DIR)
 	@echo "$(INFO) Compiling $<...$(GRAY)"
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(INC_FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	@echo "$(INFO) Compiling $(NAME)... $(GRAY)"
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(INC_FLAGS) $^ -o $@
 	@echo "$(SUCCESS) $(NAME) compiled."
 
 clean:
@@ -58,4 +67,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all lib clean fclean re
+.PHONY: all clean fclean re

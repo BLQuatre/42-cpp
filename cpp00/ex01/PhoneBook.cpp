@@ -6,12 +6,11 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 18:38:57 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/13 14:47:01 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/26 21:01:11 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <stdlib.h>
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook() : _contactsNumber(0), _lastAddedIndex(-1) {};

@@ -6,12 +6,12 @@
 #    By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/22 13:13:09 by cauvray           #+#    #+#              #
-#    Updated: 2025/01/26 17:00:37 by cauvray          ###   ########.fr        #
+#    Updated: 2025/01/26 17:17:23 by cauvray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # *** Compilation
-NAME		=	log
+NAME		=	log_prog
 CC			=	c++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 

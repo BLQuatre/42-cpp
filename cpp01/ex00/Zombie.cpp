@@ -6,20 +6,21 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 08:39:43 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/26 08:41:37 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/26 17:04:36 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include <iostream>
 
-Zombie::Zombie()
+Zombie::Zombie(std::string name)
 {
-
+	this->name = name;
 }
 
 Zombie::~Zombie()
 {
-
+	std::cout << this->name << ": Going to bed !" << std::endl;
 }
 
 void Zombie::announce()

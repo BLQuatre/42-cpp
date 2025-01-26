@@ -6,13 +6,13 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 13:19:46 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/13 14:20:25 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/26 17:27:45 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-int main(int argc, char *argv[]) {
+int	main(int argc, char *argv[]) {
 	if (argc <= 1) {
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 		return 0;

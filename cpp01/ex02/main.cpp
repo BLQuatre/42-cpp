@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:36:45 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/27 17:02:07 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/27 17:52:46 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,6 @@ int	main() {
 	std::cout	<< "Value of the string variable\t: `" << string << "`" << std::endl
 				<< "Value pointed to by stringPTR\t: `" << *stringPTR << "`" << std::endl
 				<< "Value pointed to by stringREF\t: `" << stringREF << "`" << std::endl;
+
+	return EXIT_SUCCESS;
 }

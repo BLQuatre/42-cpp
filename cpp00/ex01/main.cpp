@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 17:48:06 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/27 15:59:01 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/27 16:22:01 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main() {
 		std::cout << "Do action > ";
 		if (!(std::getline(std::cin, msg))) {
 			std::cout << "EXIT" << std::endl;
-			return 1;
+			return EXIT_SUCCESS;
 		}
 		if (msg == "EXIT")
 			break;
@@ -34,5 +34,5 @@ int	main() {
 			std::cout << "Valid actions: SEARCH, ADD, EXIT" << std::endl;
 		}
 	}
-	return 0;
+	return EXIT_SUCCESS;
 }

@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 13:19:46 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/26 17:27:45 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/27 16:22:17 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(int argc, char *argv[]) {
 	if (argc <= 1) {
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return 0;
+		return EXIT_SUCCESS;
 	}
 
 	for (int i = 1; i < argc; i++) {
@@ -24,5 +24,5 @@ int	main(int argc, char *argv[]) {
 		std::cout << argv[i];
 	}
 	std::cout << std::endl;
-	return 0;
+	return EXIT_SUCCESS;
 }

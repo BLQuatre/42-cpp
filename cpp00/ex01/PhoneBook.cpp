@@ -6,11 +6,12 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 18:38:57 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/26 21:01:11 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/27 15:42:01 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cstdlib>
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook() : _contactsNumber(0), _lastAddedIndex(-1) {};
@@ -89,7 +90,7 @@ void	PhoneBook::searchContact() {
 			std::cout << "ERROR" << std::endl;
 			return;
 		}
-		indexToGet = atoi(indexStr.c_str());
+		indexToGet = std::atoi(indexStr.c_str());
 		if ((indexStr != "0" && indexToGet == 0) || indexToGet >= this->_contactsNumber)
 			indexToGet = -1;
 	}

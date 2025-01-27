@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 18:44:25 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/26 21:01:50 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/01/27 15:41:12 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 class PhoneBook {
 	private:
-		// Contact	_contacts[MAX_CONTACTS_NUMBER];
+		Contact	_contacts[MAX_CONTACTS_NUMBER];
 		int		_contactsNumber;
 		int		_lastAddedIndex;
 

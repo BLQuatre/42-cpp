@@ -8,5 +8,7 @@ objs/
 *.out
 *.pdf
 
-cpp00/ex00/megaphone
 cpp*/ex*/*_prog
+
+cpp00/ex00/megaphone
+cpp01/ex04/*.replace

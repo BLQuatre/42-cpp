@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 19:46:41 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/01 20:47:55 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/02 13:21:21 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define HARL_HPP
 
 # include <string>
+
+# define LEVELS 4
 
 class Harl {
 	private:

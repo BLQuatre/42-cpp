@@ -6,7 +6,7 @@
 #    By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/22 13:13:09 by cauvray           #+#    #+#              #
-#    Updated: 2025/01/26 17:17:23 by cauvray          ###   ########.fr        #
+#    Updated: 2025/02/04 18:31:16 by cauvray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ $(NAME): $(OBJS)
 clean:
 	@echo "$(INFO) Removing $(OBJS_DIR)...$(GRAY)";
 	rm -rf $(OBJS_DIR)
-	@echo "$(SUCCESS) Objects and libs removed."
+	@echo "$(SUCCESS) Objects removed."
 
 fclean: clean
 	@echo "$(INFO) Removing $(NAME)...$(GRAY)"

@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:21:48 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/04 21:55:08 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/04 22:05:21 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,8 @@ class Fixed {
 		Fixed	&operator=(const Fixed &fixed);
 		~Fixed();
 
-
 		int		getRawBits() const;
 		void	setRawBits(int const raw);
-
 };
 
 #endif

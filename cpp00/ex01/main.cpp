@@ -6,11 +6,12 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 17:48:06 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/27 16:22:01 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/04 18:30:17 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cstdlib>
 #include <PhoneBook.hpp>
 
 int	main() {

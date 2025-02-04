@@ -6,11 +6,12 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 13:19:46 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/27 16:22:17 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/04 18:29:19 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cstdlib>
 
 int	main(int argc, char *argv[]) {
 	if (argc <= 1) {

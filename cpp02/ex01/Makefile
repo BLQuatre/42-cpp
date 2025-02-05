@@ -6,12 +6,12 @@
 #    By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/26 08:36:24 by cauvray           #+#    #+#              #
-#    Updated: 2025/02/04 22:01:00 by cauvray          ###   ########.fr        #
+#    Updated: 2025/02/05 00:07:54 by cauvray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # *** Compilation
-NAME		=	useful_class_prog
+NAME		=	fixed_v2_prog
 CC			=	c++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 

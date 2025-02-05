@@ -6,12 +6,12 @@
 #    By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/26 08:36:24 by cauvray           #+#    #+#              #
-#    Updated: 2025/02/04 21:21:28 by cauvray          ###   ########.fr        #
+#    Updated: 2025/02/05 00:07:45 by cauvray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # *** Compilation
-NAME		=	canon_prog
+NAME		=	fixed_v1_prog
 CC			=	c++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 

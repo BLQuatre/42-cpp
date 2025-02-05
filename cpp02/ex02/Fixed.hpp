@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:21:48 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/05 01:33:39 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/05 01:54:17 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 class Fixed {
 	private:
-		int	value;
-		static const int fractional_bits = 8;
+		int	_value;
+		static const int _fractional_bits = 8;
 
 	public:
 		Fixed();

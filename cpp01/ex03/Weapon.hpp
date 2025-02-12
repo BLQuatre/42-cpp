@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:15:12 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/27 18:50:59 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/12 13:23:03 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class Weapon {
 	private:
-		std::string	type;
+		std::string	_type;
 
 	public:
 		Weapon(const std::string &type);

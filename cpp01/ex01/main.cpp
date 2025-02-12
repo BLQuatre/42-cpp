@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 15:39:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/01/27 16:23:02 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/12 13:00:43 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@
 
 int	main(int argc, char *argv[]) {
 	if (argc != 3) {
-		std::cout << "Usage: " << argv[0] << " <zombie_amount> <zombies_name>" << std::endl;
+		std::cerr << "Usage: " << argv[0] << " <zombie_amount> <zombies_name>" << std::endl;
 		return EXIT_FAILURE;
 	}
 
 	int number = std::atoi(argv[1]);
 	if (number <= 0) {
-		std::cout << "The number of zombie must be at least one !" << std::endl;
+		std::cerr << "The number of zombie must be at least one !" << std::endl;
 		return EXIT_FAILURE;
 	}
 	std::string name = argv[2];
 	if (name.length() == 0) {
-		std::cout << "The name of zombies must be at least one char long" << std::endl;
+		std::cerr << "The name of zombies must be at least one char long" << std::endl;
 		return EXIT_FAILURE;
 	}
 	Zombie *horde = zombieHorde(number, argv[2]);

@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 19:46:23 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/02 14:02:25 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/12 13:14:03 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,8 @@ void	Harl::complain(std::string level) {
 			this->error();
 			break;
 		default:
-		std::cout	<< "[ Probably complaining about insignificant problems ]"
-					<< std::endl;
+			std::cout	<< "[ Probably complaining about insignificant problems ]"
+						<< std::endl;
 			break;
 	}
 }

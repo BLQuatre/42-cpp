@@ -6,16 +6,15 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:22:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/05 01:53:20 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/13 01:23:29 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Fixed.hpp"
 
-Fixed::Fixed() {
+Fixed::Fixed() : _value(0) {
 	std::cout << "Default constructor called" << std::endl;
-	this->_value = 0;
 }
 
 Fixed::Fixed(const Fixed &fixed) {

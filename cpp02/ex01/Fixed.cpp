@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:22:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/05 01:53:59 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/13 01:31:07 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 #include <cmath>
 #include "Fixed.hpp"
 
-Fixed::Fixed() {
+Fixed::Fixed() : _value(0) {
 	std::cout << "Default constructor called" << std::endl;
-	this->_value = 0;
 }
 
 Fixed::Fixed(const Fixed &fixed) {
@@ -57,7 +56,7 @@ float	Fixed::toFloat() const {
 }
 
 int	Fixed::toInt() const {
-	return (int) this->_value / (1 << this->_fractional_bits);
+	return (int) this->_value >> this->_fractional_bits;
 }
 
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed) {

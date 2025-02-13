@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:22:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/05 01:56:05 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/13 01:33:53 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 #include <cmath>
 #include "Fixed.hpp"
 
-Fixed::Fixed() {
-	this->_value = 0;
-}
+Fixed::Fixed() : _value(0) {}
 
 Fixed::Fixed(const Fixed &fixed) {
 	*this = fixed;
@@ -51,7 +49,7 @@ float	Fixed::toFloat() const {
 }
 
 int	Fixed::toInt() const {
-	return (int) this->_value / (1 << this->_fractional_bits);
+	return (int) this->_value >> this->_fractional_bits;
 }
 
 bool	Fixed::operator>(const Fixed &fixed) const {
@@ -79,7 +77,7 @@ bool	Fixed::operator!=(const Fixed &fixed) const {
 }
 
 Fixed	Fixed::operator+(const Fixed &fixed) const {
-	return Fixed(this->getRawBits() + fixed.toFloat());
+	return Fixed(this->toFloat() + fixed.toFloat());
 }
 
 Fixed	Fixed::operator-(const Fixed &fixed) const {

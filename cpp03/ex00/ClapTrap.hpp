@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:21:48 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/13 02:31:50 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/19 01:57:37 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@
 
 class ClapTrap {
 	private:
-		std::string	_name;
-		int			_hit_points = 10;
-		int			_energy_points = 10;
-		int			_attack_damage = 0;
+		std::string		_name;
+		unsigned int	_hitPoints;
+		unsigned int	_energyPoints;
+		unsigned int	_attackDamage;
+		bool			hasEnoughPoints();
 
 	public:
 		ClapTrap();
@@ -29,9 +30,16 @@ class ClapTrap {
 		ClapTrap	&operator=(const ClapTrap &clapTrap);
 		~ClapTrap();
 
-		void	attack(const std::string &target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
+		const std::string	getName() const;
+		unsigned int		getHitPoints() const;
+		unsigned int		getEnergyPoints() const;
+		unsigned int		getAttackDamage() const;
+
+		void			attack(const std::string &target);
+		void			takeDamage(unsigned int amount);
+		void			beRepaired(unsigned int amount);
 };
+
+std::ostream &operator<<(std::ostream &out, const ClapTrap &fixed);
 
 #endif

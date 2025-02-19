@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:21:48 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/19 01:57:37 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/19 02:05:35 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ class ClapTrap {
 		void			beRepaired(unsigned int amount);
 };
 
-std::ostream &operator<<(std::ostream &out, const ClapTrap &fixed);
+std::ostream &operator<<(std::ostream &out, const ClapTrap &clapTrap);
 
 #endif

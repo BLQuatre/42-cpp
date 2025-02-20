@@ -6,13 +6,12 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:45:53 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/19 16:53:21 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/20 15:53:00 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cstdlib>
-#include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main() {

@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:22:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/20 15:59:29 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/20 16:12:10 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 #include "FlagTrap.hpp"
 #include "ClapTrap.hpp"
 
-FlagTrap::FlagTrap(): ClapTrap(), _guardingGate(false) {
+FlagTrap::FlagTrap(): ClapTrap() {
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
 	std::cout	<< "ClapTrap " << this->_name << " evolved into a FlagTrap. (No params)." << std::endl;
 }
 
-FlagTrap::FlagTrap(const std::string &name) : ClapTrap(name), _guardingGate(false) {
+FlagTrap::FlagTrap(const std::string &name) : ClapTrap(name) {
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
 	std::cout	<< "ClapTrap " << this->_name << " evolved into a FlagTrap." << std::endl;
 }
 
-FlagTrap::FlagTrap(const FlagTrap &flagTrap) : ClapTrap(flagTrap), _guardingGate(flagTrap._guardingGate) {
+FlagTrap::FlagTrap(const FlagTrap &flagTrap) : ClapTrap(flagTrap) {
 	std::cout	<< "A wild FlagTrap named " << this->_name << " has just been copied." << std::endl;
 }
 
@@ -36,7 +36,6 @@ FlagTrap	&FlagTrap::operator=(const FlagTrap &flagTrap) {
 	if (this != &flagTrap) {
 		std::cout << "A wild FlagTrap named " << this->_name << " has just been asigned." << std::endl;
 		ClapTrap::operator=(flagTrap);
-		this->_guardingGate = flagTrap._guardingGate;
 	}
 	return (*this);
 }
@@ -46,7 +45,7 @@ FlagTrap::~FlagTrap() {
 }
 
 void	FlagTrap::highFivesGuys() {
-	if (this->_hitPoints <= 0 && !this->_guardingGate) {
+	if (this->_hitPoints <= 0) {
 		std::cout	<< "FlagTrap " << this->_name << " is died. He can't high fives." << std::endl;
 		return;
 	}

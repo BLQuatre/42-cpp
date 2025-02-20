@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:22:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/19 16:57:03 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/20 15:58:51 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ ScavTrap::ScavTrap(): ClapTrap(), _guardingGate(false) {
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
-	std::cout	<< "ClapTrap " << this->_name << " evolved into a ScavTrap. (No params)" << std::endl;
+	std::cout	<< "ClapTrap " << this->_name << " evolved into a ScavTrap. (No params)." << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name), _guardingGate(false) {
@@ -29,12 +29,12 @@ ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name), _guardingGate(fals
 }
 
 ScavTrap::ScavTrap(const ScavTrap &scavTrap) : ClapTrap(scavTrap), _guardingGate(scavTrap._guardingGate) {
-	std::cout	<< "A wild " << this->_name << " ScavTrap has just been copied" << std::endl;
+	std::cout	<< "A wild ScavTrap named " << this->_name << " has just been copied." << std::endl;
 }
 
 ScavTrap	&ScavTrap::operator=(const ScavTrap &scavTrap) {
 	if (this != &scavTrap) {
-		std::cout << "A wild " << this->_name << " has just been asigned" << std::endl;
+		std::cout << "A wild ScavTrap named " << this->_name << " has just been asigned." << std::endl;
 		ClapTrap::operator=(scavTrap);
 		this->_guardingGate = scavTrap._guardingGate;
 	}

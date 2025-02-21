@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:21:48 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/20 16:20:20 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/21 22:05:59 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ class DiamondTrap : public ScavTrap, public FlagTrap {
 		DiamondTrap(const DiamondTrap &diamondTrap);
 		DiamondTrap	&operator=(const DiamondTrap &diamondTrap);
 		~DiamondTrap();
+
+		void	attack(const std::string &target);
 
 		void	whoAmI();
 

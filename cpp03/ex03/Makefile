@@ -6,12 +6,12 @@
 #    By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/26 08:36:24 by cauvray           #+#    #+#              #
-#    Updated: 2025/02/20 17:05:19 by cauvray          ###   ########.fr        #
+#    Updated: 2025/02/21 23:22:14 by cauvray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # *** Compilation
-NAME		=	claptrap_v4_prog
+NAME		=	diamondtrap_prog
 CC			=	c++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 

@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:22:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/20 16:12:10 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/21 20:56:45 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 #include "ClapTrap.hpp"
 
 FlagTrap::FlagTrap(): ClapTrap() {
-	this->_hitPoints = 100;
-	this->_energyPoints = 100;
-	this->_attackDamage = 30;
+	this->_hitPoints = _defaultHitPoints;
+	this->_energyPoints = _defaultEnergyPoints;
+	this->_attackDamage = _defaultAttackDamage;
 	std::cout	<< "ClapTrap " << this->_name << " evolved into a FlagTrap. (No params)." << std::endl;
 }
 
 FlagTrap::FlagTrap(const std::string &name) : ClapTrap(name) {
-	this->_hitPoints = 100;
-	this->_energyPoints = 100;
-	this->_attackDamage = 30;
+	this->_hitPoints = _defaultHitPoints;
+	this->_energyPoints = _defaultEnergyPoints;
+	this->_attackDamage = _defaultAttackDamage;
 	std::cout	<< "ClapTrap " << this->_name << " evolved into a FlagTrap." << std::endl;
 }
 

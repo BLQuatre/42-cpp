@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:21:48 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/20 16:48:59 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/21 20:53:51 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@
 
 class ScavTrap : virtual public ClapTrap {
 	private:
-		bool	_guardingGate;
+		static const unsigned int _defaultHitPoints = 100;
+		static const unsigned int _defaultEnergyPoints = 50;
+		static const unsigned int _defaultAttackDamage = 20;
 
+		bool	_guardingGate;
 
 	public:
 		ScavTrap();

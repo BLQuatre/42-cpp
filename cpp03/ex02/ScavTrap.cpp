@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:22:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/20 15:58:58 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/21 20:30:47 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 #include "ClapTrap.hpp"
 
 ScavTrap::ScavTrap(): ClapTrap(), _guardingGate(false) {
-	this->_hitPoints = 100;
-	this->_energyPoints = 50;
-	this->_attackDamage = 20;
+	this->_hitPoints = _defaultHitPoints;
+	this->_energyPoints = _defaultEnergyPoints;
+	this->_attackDamage = _defaultAttackDamage;
 	std::cout	<< "ClapTrap " << this->_name << " evolved into a ScavTrap. (No params)." << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name), _guardingGate(false) {
-	this->_hitPoints = 100;
-	this->_energyPoints = 50;
-	this->_attackDamage = 20;
+	this->_hitPoints = _defaultHitPoints;
+	this->_energyPoints = _defaultEnergyPoints;
+	this->_attackDamage = _defaultAttackDamage;
 	std::cout	<< "ClapTrap " << this->_name << " evolved into a ScavTrap." << std::endl;
 }
 

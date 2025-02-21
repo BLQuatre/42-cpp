@@ -6,18 +6,18 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:22:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/20 15:58:15 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/21 19:46:34 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(): _name("Golem"), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
+ClapTrap::ClapTrap(): _name("Golem"), _hitPoints(_defaultHitPoints), _energyPoints(_defaultEnergyPoints), _attackDamage(_defaultAttackDamage) {
 	std::cout	<< "A wild ClapTrap named " << this->_name << " has just appeared (No params)." << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string &name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
+ClapTrap::ClapTrap(const std::string &name) : _name(name), _hitPoints(_defaultHitPoints), _energyPoints(_defaultEnergyPoints), _attackDamage(_defaultAttackDamage) {
 	std::cout	<< "A wild ClapTrap named " << this->_name << " has just appeared." << std::endl;
 }
 

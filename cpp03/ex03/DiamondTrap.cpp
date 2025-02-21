@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:22:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/20 17:01:51 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/21 22:06:20 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,16 @@ DiamondTrap::~DiamondTrap() {
 	std::cout	<< "DiamondTrap " << this->_name << " turned back into a ClapTrap." << std::endl;
 }
 
+void	DiamondTrap::attack(const std::string &target) {
+	ScavTrap::attack(target);
+}
+
 void DiamondTrap::whoAmI() {
+	if (this->_hitPoints <= 0) {
+		std::cout	<< "DiamondTrap " << this->_name << " is died. He can't present himself." << std::endl;
+		return;
+	}
+
 	std::cout	<< "Hey !" << std::endl
 				<< "My ClapTrap name is " << ClapTrap::_name << "." << std::endl
 				<< "My DiamondTrap name is " << this->_name << "." << std::endl

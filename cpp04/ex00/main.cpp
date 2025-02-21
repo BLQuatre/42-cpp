@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 23:27:51 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/22 00:30:40 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/22 00:53:54 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,9 @@ int main() {
 	dog->makeSound();
 
 	delete meta;
+	delete wrongMeta;
 	delete cat;
+	delete wrongCat;
 	delete dog;
 
 	return EXIT_SUCCESS;

@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:21:48 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/19 16:23:50 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/21 20:27:23 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 #include <string>
 
 class ClapTrap {
+	private:
+		static const unsigned int _defaultHitPoints = 10;
+		static const unsigned int _defaultEnergyPoints = 10;
+		static const unsigned int _defaultAttackDamage = 0;
+
 	protected:
 		std::string		_name;
 		unsigned int	_hitPoints;

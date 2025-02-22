@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 23:23:23 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/22 01:10:20 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/22 17:47:01 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,11 @@ void	Brain::setIdea(int index, const std::string &idea) {
 	this->_ideas[index] = idea;
 }
 
-void	Brain::showIdea(int index) const {
+const std::string Brain::getIdea(int index) const {
 	if (index < 0 || index > 100) {
 		std::cout << "Incorrect index!" << std::endl;
-		return;
+		return "";
 	}
 
-	std::cout << "Idea " << index << ": `" << this->_ideas[index] << "`." << std::endl;
+	return this->_ideas[index];
 }

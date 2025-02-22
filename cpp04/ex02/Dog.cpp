@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 23:23:23 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/22 01:33:00 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/22 19:32:32 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,6 @@ void	Dog::makeSound() const {
 	std::cout << "[#" << this << "] WOUF 🐕" << std::endl;
 }
 
-Brain	*Dog::getBrain() {
+Brain	*Dog::getBrain() const {
 	return this->_brain;
 }

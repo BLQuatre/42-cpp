@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 23:05:34 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/22 01:03:07 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/22 17:52:20 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Dog: public Animal {
 
 		void	makeSound() const;
 
-		Brain	*getBrain();
+		Brain	*getBrain() const;
 };
 
 #endif

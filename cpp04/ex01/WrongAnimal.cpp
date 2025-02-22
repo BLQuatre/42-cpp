@@ -6,14 +6,14 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 23:24:15 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/22 00:27:56 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/22 17:39:59 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal(): _type("WrongThing") {
+WrongAnimal::WrongAnimal(): _type("Wrong Thing") {
 	std::cout	<< "[#" << this << "] A wrong animal appeared. It's a wrong " << this->_type << ". (No params)" << std::endl;
 }
 

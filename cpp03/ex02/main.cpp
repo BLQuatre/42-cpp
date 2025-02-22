@@ -6,18 +6,18 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:45:53 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/21 22:11:07 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/22 16:47:38 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cstdlib>
-#include "FlagTrap.hpp"
+#include "FragTrap.hpp"
 
 int main() {
-	FlagTrap a("Gobelin");
-	FlagTrap b( a );
-	FlagTrap c;
+	FragTrap a("Gobelin");
+	FragTrap b( a );
+	FragTrap c;
 
 	c = b;
 

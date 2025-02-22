@@ -6,31 +6,30 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:22:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/21 22:06:20 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/22 16:52:31 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "DiamondTrap.hpp"
-#include "DiamondTrap.hpp"
-#include "FlagTrap.hpp"
+#include "FragTrap.hpp"
 #include "ClapTrap.hpp"
 
 DiamondTrap::DiamondTrap(): ClapTrap("Golem_clap_name"), _name("Golem") {
-	this->_hitPoints = FlagTrap::_hitPoints;
+	this->_hitPoints = FragTrap::_hitPoints;
 	this->_energyPoints = DiamondTrap::_energyPoints;
-	this->_attackDamage = FlagTrap::_attackDamage;
+	this->_attackDamage = FragTrap::_attackDamage;
 	std::cout	<< "ClapTrap " << this->_name << " evolved into a DiamondTrap. (No params)." << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const std::string &name) : ClapTrap(name + "_clap_name"), _name(name) {
-	this->_hitPoints = FlagTrap::_hitPoints;
+	this->_hitPoints = FragTrap::_hitPoints;
 	this->_energyPoints = DiamondTrap::_energyPoints;
-	this->_attackDamage = FlagTrap::_attackDamage;
+	this->_attackDamage = FragTrap::_attackDamage;
 	std::cout	<< "ClapTrap " << this->_name << " evolved into a DiamondTrap." << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &diamondTrap) : ClapTrap(diamondTrap), ScavTrap(diamondTrap), FlagTrap(diamondTrap), _name(diamondTrap._name) {
+DiamondTrap::DiamondTrap(const DiamondTrap &diamondTrap) : ClapTrap(diamondTrap), ScavTrap(diamondTrap), FragTrap(diamondTrap), _name(diamondTrap._name) {
 	std::cout	<< "A wild DiamondTrap named " << this->_name << " has just been copied." << std::endl;
 }
 

@@ -6,14 +6,14 @@
 #    By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/26 08:36:24 by cauvray           #+#    #+#              #
-#    Updated: 2025/02/22 16:52:54 by cauvray          ###   ########.fr        #
+#    Updated: 2025/02/22 17:06:24 by cauvray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # *** Compilation
 NAME		=	diamondtrap_prog
 CC			=	c++
-CFLAGS		=	-Wall -Wextra -Werror -std=c++98
+CFLAGS		=	-Wall -Wextra -Werror -Wshadow -std=c++98
 
 # *** Files
 _FILES		=	main ClapTrap ScavTrap FragTrap DiamondTrap

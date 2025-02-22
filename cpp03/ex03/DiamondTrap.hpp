@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:21:48 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/21 23:07:23 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/22 16:52:39 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 # include <string>
 # include "ScavTrap.hpp"
-# include "FlagTrap.hpp"
+# include "FragTrap.hpp"
 
-class DiamondTrap : public ScavTrap, public FlagTrap {
+class DiamondTrap : public ScavTrap, public FragTrap {
 	private:
 		std::string	_name;
 

@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 23:23:23 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/22 01:32:52 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/22 19:32:17 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,6 @@ void	Cat::makeSound() const {
 	std::cout << "[#" << this << "] MOEW 🐈" << std::endl;
 }
 
-Brain	*Cat::getBrain() {
+Brain	*Cat::getBrain() const {
 	return this->_brain;
 }

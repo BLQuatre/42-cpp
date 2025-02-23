@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 23:27:51 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/22 19:29:51 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/23 17:48:44 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int main() {
 
 	std::cout	<< std::endl << std::endl;
 
-	const Animal	*(animal_array[10]);
+	const Animal	*animal_array[10];
 	std::cout << std::endl;
 
 	for (int i = 0; i < 5; i++)

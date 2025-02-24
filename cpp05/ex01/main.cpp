@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 00:18:03 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/23 01:33:53 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/24 21:10:08 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main() {
 		Bureaucrat bureaucrat = Bureaucrat("V30", 30);
 
 		std::cout	<< std::endl;
-		std::cout << form << std::endl;
+		std::cout	<< form << std::endl;
 		std::cout	<< std::endl;
 
 		bureaucrat.signForm(form);
@@ -43,13 +43,13 @@ int main() {
 		Bureaucrat bureaucrat = Bureaucrat("V60", 60);
 
 		std::cout	<< std::endl;
-		std::cout << form << std::endl;
+		std::cout	<< form << std::endl;
 		std::cout	<< std::endl;
 
 		bureaucrat.signForm(form);
 
 		std::cout	<< std::endl;
-		std::cout << form << std::endl;
+		std::cout	<< form << std::endl;
 		std::cout	<< std::endl;
 	}
 

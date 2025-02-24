@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 00:18:03 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/23 03:14:49 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/24 21:10:37 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,12 @@ int main() {
 		Bureaucrat bureaucrat = Bureaucrat("V1", 1);
 
 		std::cout	<< std::endl;
-		std::cout << form << std::endl;
+		std::cout	<< form << std::endl;
 		std::cout	<< std::endl;
 
 		bureaucrat.executeForm(form);
 
 		std::cout	<< std::endl;
-		std::cout << form << std::endl;
-		std::cout	<< std::endl;
-
-		bureaucrat.signForm(form);
-
-		std::cout	<< std::endl;
 		std::cout	<< form << std::endl;
 		std::cout	<< std::endl;
 
@@ -47,8 +41,14 @@ int main() {
 		std::cout	<< form << std::endl;
 		std::cout	<< std::endl;
 
+		bureaucrat.signForm(form);
+
 		std::cout	<< std::endl;
-		std::cout << form << std::endl;
+		std::cout	<< form << std::endl;
+		std::cout	<< std::endl;
+
+		std::cout	<< std::endl;
+		std::cout	<< form << std::endl;
 		std::cout	<< std::endl;
 
 		bureaucrat.executeForm(form);
@@ -63,18 +63,12 @@ int main() {
 		Bureaucrat bureaucrat = Bureaucrat("V1", 1);
 
 		std::cout	<< std::endl;
-		std::cout << form << std::endl;
+		std::cout	<< form << std::endl;
 		std::cout	<< std::endl;
 
 		bureaucrat.executeForm(form);
 
 		std::cout	<< std::endl;
-		std::cout << form << std::endl;
-		std::cout	<< std::endl;
-
-		bureaucrat.signForm(form);
-
-		std::cout	<< std::endl;
 		std::cout	<< form << std::endl;
 		std::cout	<< std::endl;
 
@@ -84,8 +78,14 @@ int main() {
 		std::cout	<< form << std::endl;
 		std::cout	<< std::endl;
 
+		bureaucrat.signForm(form);
+
 		std::cout	<< std::endl;
-		std::cout << form << std::endl;
+		std::cout	<< form << std::endl;
+		std::cout	<< std::endl;
+
+		std::cout	<< std::endl;
+		std::cout	<< form << std::endl;
 		std::cout	<< std::endl;
 
 		bureaucrat.executeForm(form);
@@ -100,18 +100,12 @@ int main() {
 		Bureaucrat bureaucrat = Bureaucrat("V1", 1);
 
 		std::cout	<< std::endl;
-		std::cout << form << std::endl;
+		std::cout	<< form << std::endl;
 		std::cout	<< std::endl;
 
 		bureaucrat.executeForm(form);
 
 		std::cout	<< std::endl;
-		std::cout << form << std::endl;
-		std::cout	<< std::endl;
-
-		bureaucrat.signForm(form);
-
-		std::cout	<< std::endl;
 		std::cout	<< form << std::endl;
 		std::cout	<< std::endl;
 
@@ -121,8 +115,14 @@ int main() {
 		std::cout	<< form << std::endl;
 		std::cout	<< std::endl;
 
+		bureaucrat.signForm(form);
+
 		std::cout	<< std::endl;
-		std::cout << form << std::endl;
+		std::cout	<< form << std::endl;
+		std::cout	<< std::endl;
+
+		std::cout	<< std::endl;
+		std::cout	<< form << std::endl;
 		std::cout	<< std::endl;
 
 		bureaucrat.executeForm(form);

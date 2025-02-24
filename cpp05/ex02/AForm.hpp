@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 22:53:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/23 03:11:46 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/24 21:29:35 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class AForm {
 		AForm(const std::string &name, int gradeToSign, int gradeToExecute);
 		AForm(const AForm &form);
 		AForm	&operator=(const AForm &form);
-		~AForm();
+		virtual ~AForm();
 
 		const std::string	getName() const;
 		bool				isSigned() const;

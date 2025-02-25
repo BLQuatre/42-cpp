@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:22:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/22 17:16:25 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/25 22:30:37 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ DiamondTrap::DiamondTrap(const std::string &name) : ClapTrap(name + "_clap_name"
 	std::cout	<< "ClapTrap " << this->_name << " evolved into a DiamondTrap." << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &diamondTrap) : ClapTrap(diamondTrap), _name(diamondTrap._name) {
+DiamondTrap::DiamondTrap(const DiamondTrap &diamondTrap) : ClapTrap(diamondTrap), ScavTrap(diamondTrap), FragTrap(diamondTrap), _name(diamondTrap._name) {
 	std::cout	<< "A wild DiamondTrap named " << this->_name << " has just been copied." << std::endl;
 }
 

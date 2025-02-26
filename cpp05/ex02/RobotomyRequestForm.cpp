@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 22:51:52 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/23 03:11:17 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/26 05:32:23 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ const std::string	&RobotomyRequestForm::getTarget() const {
 
 void	RobotomyRequestForm::executeAction() const {
 	std::cout	<< " * DRILLING NOISES *" << std::endl;
-	srand(time(0));
+	srand(time(NULL));
 	if (rand() % 2 == 0)
 		std::cout	<< this->_target << " has been robotomized successfully." << std::endl;
 	else

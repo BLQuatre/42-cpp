@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 00:18:03 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/25 22:36:01 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/02/26 05:32:51 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include "C.hpp"
 
 int main() {
-	srand(time(0));
+	srand(time(NULL));
 
 	std::cout << "Trying Identify function (with ptr) with NULL Base:" << std::endl;
 	Base *null = NULL;

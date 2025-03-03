@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 21:33:25 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/25 22:17:22 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/03/03 16:35:16 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,21 +55,21 @@ void	identify(Base* p) {
 
 void	identify(Base& p) {
 	try {
-		dynamic_cast<A &>(p);
+		(void) dynamic_cast<A &>(p);
 		std::cout << "It's Class A" << std::endl;
 		return;
 	} catch (std::exception &ex) {
 	}
 
 	try {
-		dynamic_cast<B &>(p);
+		(void) dynamic_cast<B &>(p);
 		std::cout << "It's Class B" << std::endl;
 		return;
 	} catch (std::exception &ex) {
 	}
 
 	try {
-		dynamic_cast<C &>(p);
+		(void) dynamic_cast<C &>(p);
 		std::cout << "It's Class C" << std::endl;
 		return;
 	} catch (std::exception &ex) {

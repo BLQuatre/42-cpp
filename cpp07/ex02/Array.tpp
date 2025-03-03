@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 22:33:02 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/26 02:21:45 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/03/03 17:15:54 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 #include "Array.hpp"
 
 template <typename T>
-Array<T>::Array(): _size(0) {
-	this->_array = new T[0];
+Array<T>::Array(): _array(NULL), _size(0) {
 }
 
 template <typename T>
@@ -39,11 +38,13 @@ Array<T>::Array(const Array &array) {
 template <typename T>
 Array<T>	&Array<T>::operator=(const Array &array) {
 	if (&array != this) {
+		delete[] this->_array;
 		this->_array = new T[array._size];
 		this->_size = array._size;
 		for (unsigned int i = 0; i < array._size; i++)
-			this->_array[i] = array[i];
+			this->_array[i] = array._array[i];
 	}
+	return *this;
 }
 
 template <typename T>
@@ -62,17 +63,16 @@ T		&Array<T>::operator[](unsigned int index) {
 
 template <typename T>
 const T	&Array<T>::operator[](unsigned int index) const {
-	return this->operator[](index);
-}
+	if (index >= this->_size) {
+		throw std::out_of_range("Index out of bound");
+	}
 
+	return this->_array[index];
+}
 
 template <typename T>
 unsigned int	Array<T>::size() const {
 	return this->_size;
 }
-
-
-
-
 
 #endif

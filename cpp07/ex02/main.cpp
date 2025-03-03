@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 00:18:03 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/26 02:22:24 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/03/03 17:13:25 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int main() {
 	std::cout	<< std::endl << std::endl
-				<< "Testing with int:" << std::endl;
+				<< "Testing with int (out of range):" << std::endl;
 	{
 		Array<int> array = Array<int>();
 

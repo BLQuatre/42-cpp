@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:21:48 by cauvray           #+#    #+#             */
-/*   Updated: 2025/03/10 22:03:59 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/03/14 22:08:58 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class RPN {
 		~RPN();
 
 	public:
-		static int calculate(const std::string input);
+		static int calculate(const std::string &input);
 };
 
 #endif

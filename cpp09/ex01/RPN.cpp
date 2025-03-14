@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:22:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/03/14 22:02:30 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/03/14 22:08:46 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ static void	doOperation(std::stack<int> &numbers, int op) {
 	numbers.push(result);
 }
 
-int	RPN::calculate(std::string input) {
+int	RPN::calculate(const std::string &input) {
 	if (!isValidExpression(input)) {
 		std::cerr << "Error" << std::endl;
 		exit(EXIT_FAILURE);

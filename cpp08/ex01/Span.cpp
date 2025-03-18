@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 22:33:02 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/26 08:13:49 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/03/04 18:18:10 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ void	Span::addNumber(int value) {
 	this->_array.push_back(value);
 }
 
-#include <iostream>
 void	Span::addNumbers(const std::vector<int>vector) {
 	size_t count = static_cast<size_t>(std::distance(vector.begin(), vector.end()));
 
@@ -76,6 +75,7 @@ int	Span::shortestSpan() const {
 
 	return min;
 }
+
 int	Span::longestSpan() const {
 	if (this->_array.size() <= 1) {
 		throw Span::NotEnoughElementsException();

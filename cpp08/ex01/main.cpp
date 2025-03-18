@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 00:18:03 by cauvray           #+#    #+#             */
-/*   Updated: 2025/02/26 08:13:32 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/03/04 18:37:05 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,25 @@ int main() {
 	}
 
 	std::cout	<< std::endl << std::endl
-				<< "Not enough elements in span (Shortest):" << std::endl;
+				<< "Zero element in span (Shortest):" << std::endl;
+	try {
+		Span smallSpan(0);
+		smallSpan.shortestSpan();
+	} catch (const std::exception &ex) {
+		std::cout << "Expected exception: " << ex.what() << std::endl;
+	}
+
+	std::cout	<< std::endl << std::endl
+				<< "Zero element in span (Longest):" << std::endl;
+	try {
+		Span smallSpan(0);
+		smallSpan.longestSpan();
+	} catch (const std::exception &ex) {
+		std::cout << "Expected exception: " << ex.what() << std::endl;
+	}
+
+	std::cout	<< std::endl << std::endl
+				<< "One element in span (Shortest):" << std::endl;
 	try {
 		Span smallSpan(1);
 		smallSpan.addNumber(10);
@@ -62,11 +80,11 @@ int main() {
 	}
 
 	std::cout	<< std::endl << std::endl
-				<< "Not enough elements in span (Longest):" << std::endl;
+				<< "One element in span (Longest):" << std::endl;
 	try {
 		Span smallSpan(1);
 		smallSpan.addNumber(10);
-		smallSpan.shortestSpan();
+		smallSpan.longestSpan();
 	} catch (const std::exception &ex) {
 		std::cout << "Expected exception: " << ex.what() << std::endl;
 	}

@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:21:48 by cauvray           #+#    #+#             */
-/*   Updated: 2025/03/09 21:41:10 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/03/27 19:44:15 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 class PmergeMe {
 	private:
-
-	public:
 		PmergeMe();
 		PmergeMe(const PmergeMe &pmergeMe);
 		PmergeMe	&operator=(const PmergeMe &pmergeMe);

@@ -6,24 +6,30 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:21:48 by cauvray           #+#    #+#             */
-/*   Updated: 2025/03/14 22:17:28 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/03/29 09:39:38 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BITCOIN_EXCHANGE_HPP
-# define BITCOIN_EXCHANGE_HPP
+#pragma once
 
-# include <string>
+#include <ctime>
+#include <map>
+#include <cstdlib>
+#include <iostream>
+#include <sstream>
+#include <cstring>
+#include <fstream>
 
 class BitcoinExchange {
 	private:
+		std::map<std::time_t, double>	_data;
+
 		BitcoinExchange();
 		BitcoinExchange(const BitcoinExchange &bitcoinExchange);
 		BitcoinExchange	&operator=(const BitcoinExchange &bitcoinExchange);
-		~BitcoinExchange();
 
 	public:
-		static void displayFile(const std::string &fileName);
+		BitcoinExchange(const std::string &dataFile);
+		~BitcoinExchange();
+		void displayExchange(const std::string &fileName);
 };
-
-#endif

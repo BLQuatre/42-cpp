@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:22:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/03/29 10:21:58 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/04/09 22:32:58 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,8 +99,11 @@ void BitcoinExchange::displayExchange(const std::string &fileName) {
 
 			stringToTm(trim(tmp), date);
 
-			std::getline(ssLine, tmp, '|');
-			double value = std::atof(trim(tmp).c_str());
+			double value;
+			ssLine >> value;
+
+			if (ssLine.fail() || !ssLine.eof())
+				throw std::runtime_error("bad input => " + line);
 
 			if (value < 0)
 				throw std::runtime_error("not a positive number.");

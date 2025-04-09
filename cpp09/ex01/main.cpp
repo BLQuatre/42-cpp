@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 00:18:03 by cauvray           #+#    #+#             */
-/*   Updated: 2025/03/14 22:02:10 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/04/09 22:13:32 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,13 @@ int main(int argc, char *argv[]) {
 		return EXIT_FAILURE;
 	}
 
-	int result = RPN::calculate(argv[1]);
-
-	std::cout << result << std::endl;
+	try {
+		int result = RPN::calculate(argv[1]);
+		std::cout << result << std::endl;
+	} catch (std::exception &e) {
+		std::cerr << "Error" << std::endl;
+		return EXIT_FAILURE;
+	}
 
 	return EXIT_SUCCESS;
 }

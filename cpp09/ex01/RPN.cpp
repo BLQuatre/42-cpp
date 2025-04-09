@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:22:14 by cauvray           #+#    #+#             */
-/*   Updated: 2025/03/14 22:08:46 by cauvray          ###   ########.fr       */
+/*   Updated: 2025/04/09 22:14:37 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ static void	doOperation(std::stack<int> &numbers, int op) {
 			result = i2 * i1;
 			break;
 		case '/':
+			if (i1 == 0)
+				throw std::runtime_error("Division by zero");
 			result = i2 / i1;
 			break;
 	}
@@ -74,10 +76,8 @@ static void	doOperation(std::stack<int> &numbers, int op) {
 }
 
 int	RPN::calculate(const std::string &input) {
-	if (!isValidExpression(input)) {
-		std::cerr << "Error" << std::endl;
-		exit(EXIT_FAILURE);
-	}
+	if (!isValidExpression(input))
+		throw std::runtime_error("Invalid expression");
 
 	std::stack<int> numbers;
 	for (std::string::const_iterator it = input.begin(); it != input.end(); it++) {
@@ -86,5 +86,6 @@ int	RPN::calculate(const std::string &input) {
 		else if (isop(*it))
 			doOperation(numbers, *it);
 	}
+
 	return numbers.top();
 }
